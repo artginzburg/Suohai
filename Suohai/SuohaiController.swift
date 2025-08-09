@@ -147,7 +147,7 @@ extension SuohaiController {
 
     func handleReopen() {
 #if DEBUG
-        guard !isRunningInXcode() || timesHandledReopen >= 2 else {
+        guard !isRunningInXcode() || timesHandledReopen >= 1 else {
             timesHandledReopen += 1
             return
         }
