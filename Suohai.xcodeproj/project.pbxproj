@@ -329,6 +329,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Suohai;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017年 Sunnyyoung. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -351,6 +352,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Suohai;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2017年 Sunnyyoung. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
