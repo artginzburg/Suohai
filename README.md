@@ -2,6 +2,10 @@
 
 Audio input/output source locking tool for macOS.
 
+## Features
+
+- If IO sources only list built-in devices — the status icon is going to be hidden.
+
 ## Screenshot
 
 ![0x01](Screenshot/0x01.png)

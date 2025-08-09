@@ -19,4 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         SuohaiListener.shared.stopListener()
     }
 
+    @IBOutlet weak var controller: SuohaiController!
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows: Bool) -> Bool {
+        controller.handleReopen()
+        return true
+    }
+
 }
