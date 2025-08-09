@@ -95,12 +95,17 @@ class SuohaiListener {
             var devices = [AudioDevice]()
             for id in deviceIDs {
                 let name: String = {
-                    var name: CFString = "" as CFString
+                    var cfName: CFString? = nil
                     var address = AudioAddress.deviceName
                     var size = UInt32(0)
                     AudioObjectGetPropertyDataSize(id, &address, 0, nil, &size)
-                    AudioObjectGetPropertyData(id, &address, 0, nil, &size, &name)
-                    return name as String
+                    let status = withUnsafeMutablePointer(to: &cfName) { ptr in
+                        ptr.withMemoryRebound(to: UInt8.self, capacity: Int(size)) { rawPtr in
+                            AudioObjectGetPropertyData(id, &address, 0, nil, &size, rawPtr)
+                        }
+                    }
+                    guard status == noErr, let cfName else { return "(Name unknown)" }
+                    return cfName as String
                 }()
                 let type: AudioDeviceType = {
                     var address = AudioAddress.streamConfiguration
